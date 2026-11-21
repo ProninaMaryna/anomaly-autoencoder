@@ -1,0 +1,10 @@
+name: e5_sample_efficiency
+description: Вибіркова ефективність - якість залежно від кількості нормальних навчальних зразків (AE vs PCA).
+seeds: [0, 1, 2]
+overrides:
+  train: {epochs: 200, early_stopping: {patience: 15}}   # малі вибірки => менше кроків за епоху
+  baseline_params: {pca: {n_components: 16}}
+sweep:
+  data.normal_classes: [[2], [5], [8]]
+  data.n_train: [50, 100, 300, 1000, 3000, null]
+  method: [autoencoder, pca]

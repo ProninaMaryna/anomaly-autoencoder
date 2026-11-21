@@ -1,0 +1,20 @@
+18:37:19 | INFO | Конфігурація: {'method': 'autoencoder', 'num_threads': 3, 'save_model': True, 'data': {'root': 'data', 'normal_classes': [5], 'val_fraction': 0.1, 'val_anomaly_ratio': 1.0, 'n_train': None, 'contamination': 0.0}, 'model': {'arch': 'conv', 'latent_dim': 32, 'channels': [32, 64], 'hidden': [512, 256], 'dropout': 0.0}, 'train': {'epochs': 40, 'batch_size': 128, 'lr': 0.001, 'weight_decay': 0.0, 'loss': 'mse', 'noise_std': 0.0, 'grad_clip': None, 'early_stopping': {'monitor': 'val_auc', 'patience': 8}}, 'eval': {'threshold_percentile': 95}, 'baseline_params': {'pca': {'n_components': 32}, 'iforest': {'n_estimators': 200}, 'ocsvm': {'nu': 0.1, 'gamma': 'scale'}}, 'experiment': 'e8_early_stopping'}
+18:37:19 | INFO | Дані: train=4879 (аномалій 0), val=1084 (аномалій 542), test=10000 (аномалій 9108)
+18:37:19 | INFO | Модель conv, параметрів: 241441
+18:37:23 | INFO | epoch   1 | train_loss 0.10123 | val_loss 0.06503 | val_auc 0.6313 | 4.5s
+18:37:28 | INFO | epoch   2 | train_loss 0.06215 | val_loss 0.06030 | val_auc 0.7199 | 4.6s
+18:37:33 | INFO | epoch   3 | train_loss 0.05640 | val_loss 0.04732 | val_auc 0.8463 | 4.6s
+18:37:38 | INFO | epoch   4 | train_loss 0.03940 | val_loss 0.03039 | val_auc 0.9321 | 4.6s
+18:37:44 | INFO | epoch   5 | train_loss 0.02570 | val_loss 0.02110 | val_auc 0.9601 | 6.1s
+18:37:50 | INFO | epoch   6 | train_loss 0.01868 | val_loss 0.01651 | val_auc 0.9623 | 5.4s
+18:37:56 | INFO | epoch   7 | train_loss 0.01503 | val_loss 0.01387 | val_auc 0.9638 | 5.5s
+18:38:02 | INFO | epoch   8 | train_loss 0.01282 | val_loss 0.01238 | val_auc 0.9609 | 5.7s
+18:38:08 | INFO | epoch   9 | train_loss 0.01139 | val_loss 0.01111 | val_auc 0.9601 | 6.5s
+18:38:14 | INFO | epoch  10 | train_loss 0.01035 | val_loss 0.01022 | val_auc 0.9563 | 5.6s
+18:38:19 | INFO | epoch  11 | train_loss 0.00949 | val_loss 0.00949 | val_auc 0.9518 | 4.7s
+18:38:25 | INFO | epoch  12 | train_loss 0.00887 | val_loss 0.00906 | val_auc 0.9522 | 5.3s
+18:38:29 | INFO | epoch  13 | train_loss 0.00834 | val_loss 0.00856 | val_auc 0.9484 | 4.3s
+18:38:33 | INFO | epoch  14 | train_loss 0.00794 | val_loss 0.00817 | val_auc 0.9456 | 4.2s
+18:38:38 | INFO | epoch  15 | train_loss 0.00758 | val_loss 0.00818 | val_auc 0.9430 | 4.3s
+18:38:38 | INFO | Рання зупинка на епосі 15 (найкраща — 7)
+18:38:40 | INFO | TEST: ROC-AUC 0.9629 | PR-AUC 0.9956 | F1 0.8642 | FPR 0.0437

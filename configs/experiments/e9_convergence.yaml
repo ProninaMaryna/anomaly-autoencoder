@@ -1,0 +1,13 @@
+name: e9_convergence
+description: >
+  Збіжність фінальної конфігурації (Dense AE, latent=16) без жорсткого ліміту 40 епох:
+  до 200 епох, рання зупинка за val_loss, коли MSE покращується менше ніж на 0.1 % протягом
+  10 епох. Перевіряє, чи довше навчання до плато val MSE змінює якість виявлення.
+seeds: [0, 1, 2]
+overrides:
+  model: {arch: dense, latent_dim: 16}
+  train:
+    epochs: 200
+    early_stopping: {monitor: val_loss, patience: 10, min_delta: 0.001}
+sweep:
+  data.normal_classes: [[2], [5], [8]]

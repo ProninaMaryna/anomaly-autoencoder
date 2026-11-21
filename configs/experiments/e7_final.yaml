@@ -1,0 +1,11 @@
+name: e7_final
+description: >
+  Фінальна оцінка обраної за VAL ROC-AUC конфігурації (Dense AE, latent=16, MSE, lr=1e-3,
+  рання зупинка за val_loss) на всіх 10 класах MNIST проти класичних бейзлайнів.
+seeds: [0, 1, 2]
+overrides:
+  model: {arch: dense, latent_dim: 16}
+  baseline_params: {pca: {n_components: 16}}
+sweep:
+  data.normal_classes: [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]]
+  method: [autoencoder, pca, iforest, ocsvm]

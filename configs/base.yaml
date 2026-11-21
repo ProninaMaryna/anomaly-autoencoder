@@ -1,0 +1,39 @@
+# Базова конфігурація. Експерименти в configs/experiments/*.yaml перевизначають окремі поля.
+method: autoencoder          # autoencoder | pca | iforest | ocsvm
+num_threads: 3              # 4 паралельні процеси x 3 потоки на 12-ядерному CPU
+save_model: true
+
+data:
+  root: data
+  normal_classes: [8]        # "норма" — цифра 8, решта цифр — аномалії
+  val_fraction: 0.1          # частка нормальних train-зразків у валідацію
+  val_anomaly_ratio: 1.0     # к-сть аномалій у валідації = ratio * к-сть нормальних
+  n_train: null              # обмеження обсягу навчання (null = всі)
+  contamination: 0.0         # частка аномалій, домішаних у навчальну вибірку
+
+model:
+  arch: conv                 # conv | dense
+  latent_dim: 32
+  channels: [32, 64]         # для conv
+  hidden: [512, 256]         # для dense
+  dropout: 0.0
+
+train:
+  epochs: 40
+  batch_size: 128
+  lr: 0.001
+  weight_decay: 0.0
+  loss: mse                  # mse | bce | l1
+  noise_std: 0.0             # >0 => denoising autoencoder
+  early_stopping:
+    monitor: val_loss        # val_loss (лише нормальні зразки) — не використовує мітки аномалій
+    patience: 8
+    min_delta: 0.0           # мінімальне відносне покращення монітора (0 = будь-яке)
+
+eval:
+  threshold_percentile: 95   # поріг = 95-й перцентиль помилки на валідаційних нормальних (FPR≈5%)
+
+baseline_params:
+  pca: {n_components: 32}
+  iforest: {n_estimators: 200}
+  ocsvm: {nu: 0.1, gamma: scale}

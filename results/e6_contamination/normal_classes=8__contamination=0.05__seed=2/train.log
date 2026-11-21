@@ -1,0 +1,44 @@
+17:51:36 | INFO | Конфігурація: {'method': 'autoencoder', 'num_threads': 3, 'save_model': True, 'data': {'root': 'data', 'normal_classes': [8], 'val_fraction': 0.1, 'val_anomaly_ratio': 1.0, 'n_train': None, 'contamination': 0.05}, 'model': {'arch': 'conv', 'latent_dim': 32, 'channels': [32, 64], 'hidden': [512, 256], 'dropout': 0.0}, 'train': {'epochs': 40, 'batch_size': 128, 'lr': 0.001, 'weight_decay': 0.0, 'loss': 'mse', 'noise_std': 0.0, 'grad_clip': None, 'early_stopping': {'monitor': 'val_loss', 'patience': 8}}, 'eval': {'threshold_percentile': 95}, 'baseline_params': {'pca': {'n_components': 32}, 'iforest': {'n_estimators': 200}, 'ocsvm': {'nu': 0.1, 'gamma': 'scale'}}, 'experiment': 'e6_contamination'}
+17:51:36 | INFO | Дані: train=5543 (аномалій 277), val=1170 (аномалій 585), test=10000 (аномалій 9026)
+17:51:36 | INFO | Модель conv, параметрів: 241441
+17:51:41 | INFO | epoch   1 | train_loss 0.09702 | val_loss 0.06108 | val_auc 0.7279 | 5.4s
+17:51:47 | INFO | epoch   2 | train_loss 0.05919 | val_loss 0.05524 | val_auc 0.8082 | 5.6s
+17:51:53 | INFO | epoch   3 | train_loss 0.04767 | val_loss 0.03778 | val_auc 0.8186 | 5.4s
+17:51:59 | INFO | epoch   4 | train_loss 0.03188 | val_loss 0.02548 | val_auc 0.7945 | 5.5s
+17:52:05 | INFO | epoch   5 | train_loss 0.02244 | val_loss 0.01941 | val_auc 0.7822 | 6.2s
+17:52:11 | INFO | epoch   6 | train_loss 0.01769 | val_loss 0.01606 | val_auc 0.7766 | 5.5s
+17:52:17 | INFO | epoch   7 | train_loss 0.01506 | val_loss 0.01427 | val_auc 0.7782 | 5.5s
+17:52:22 | INFO | epoch   8 | train_loss 0.01334 | val_loss 0.01277 | val_auc 0.7702 | 5.6s
+17:52:28 | INFO | epoch   9 | train_loss 0.01212 | val_loss 0.01189 | val_auc 0.7678 | 5.5s
+17:52:34 | INFO | epoch  10 | train_loss 0.01128 | val_loss 0.01115 | val_auc 0.7611 | 5.4s
+17:52:40 | INFO | epoch  11 | train_loss 0.01045 | val_loss 0.01048 | val_auc 0.7635 | 5.9s
+17:52:46 | INFO | epoch  12 | train_loss 0.00991 | val_loss 0.00995 | val_auc 0.7593 | 6.3s
+17:52:52 | INFO | epoch  13 | train_loss 0.00937 | val_loss 0.00989 | val_auc 0.7581 | 5.6s
+17:52:58 | INFO | epoch  14 | train_loss 0.00899 | val_loss 0.00932 | val_auc 0.7484 | 5.5s
+17:53:04 | INFO | epoch  15 | train_loss 0.00859 | val_loss 0.00898 | val_auc 0.7511 | 5.6s
+17:53:10 | INFO | epoch  16 | train_loss 0.00828 | val_loss 0.00874 | val_auc 0.7555 | 6.3s
+17:53:16 | INFO | epoch  17 | train_loss 0.00801 | val_loss 0.00854 | val_auc 0.7493 | 5.8s
+17:53:23 | INFO | epoch  18 | train_loss 0.00779 | val_loss 0.00842 | val_auc 0.7409 | 5.9s
+17:53:29 | INFO | epoch  19 | train_loss 0.00759 | val_loss 0.00820 | val_auc 0.7478 | 5.9s
+17:53:35 | INFO | epoch  20 | train_loss 0.00742 | val_loss 0.00813 | val_auc 0.7435 | 6.0s
+17:53:43 | INFO | epoch  21 | train_loss 0.00725 | val_loss 0.00791 | val_auc 0.7477 | 7.5s
+17:53:49 | INFO | epoch  22 | train_loss 0.00709 | val_loss 0.00779 | val_auc 0.7469 | 6.0s
+17:53:55 | INFO | epoch  23 | train_loss 0.00694 | val_loss 0.00775 | val_auc 0.7496 | 5.8s
+17:54:01 | INFO | epoch  24 | train_loss 0.00683 | val_loss 0.00761 | val_auc 0.7466 | 5.7s
+17:54:07 | INFO | epoch  25 | train_loss 0.00671 | val_loss 0.00753 | val_auc 0.7491 | 5.9s
+17:54:13 | INFO | epoch  26 | train_loss 0.00657 | val_loss 0.00739 | val_auc 0.7493 | 5.6s
+17:54:19 | INFO | epoch  27 | train_loss 0.00646 | val_loss 0.00742 | val_auc 0.7461 | 6.0s
+17:54:27 | INFO | epoch  28 | train_loss 0.00637 | val_loss 0.00730 | val_auc 0.7516 | 7.3s
+17:54:34 | INFO | epoch  29 | train_loss 0.00627 | val_loss 0.00726 | val_auc 0.7451 | 7.1s
+17:54:41 | INFO | epoch  30 | train_loss 0.00617 | val_loss 0.00719 | val_auc 0.7491 | 6.7s
+17:54:49 | INFO | epoch  31 | train_loss 0.00611 | val_loss 0.00708 | val_auc 0.7501 | 7.4s
+17:54:57 | INFO | epoch  32 | train_loss 0.00608 | val_loss 0.00716 | val_auc 0.7452 | 7.7s
+17:55:05 | INFO | epoch  33 | train_loss 0.00596 | val_loss 0.00708 | val_auc 0.7454 | 8.1s
+17:55:14 | INFO | epoch  34 | train_loss 0.00587 | val_loss 0.00705 | val_auc 0.7451 | 8.3s
+17:55:21 | INFO | epoch  35 | train_loss 0.00584 | val_loss 0.00697 | val_auc 0.7450 | 6.8s
+17:55:29 | INFO | epoch  36 | train_loss 0.00576 | val_loss 0.00688 | val_auc 0.7477 | 7.9s
+17:55:37 | INFO | epoch  37 | train_loss 0.00569 | val_loss 0.00691 | val_auc 0.7478 | 7.0s
+17:55:44 | INFO | epoch  38 | train_loss 0.00563 | val_loss 0.00684 | val_auc 0.7469 | 7.0s
+17:55:50 | INFO | epoch  39 | train_loss 0.00556 | val_loss 0.00689 | val_auc 0.7488 | 6.2s
+17:55:57 | INFO | epoch  40 | train_loss 0.00555 | val_loss 0.00679 | val_auc 0.7465 | 6.8s
+17:56:00 | INFO | TEST: ROC-AUC 0.7210 | PR-AUC 0.9605 | F1 0.4582 | FPR 0.0493

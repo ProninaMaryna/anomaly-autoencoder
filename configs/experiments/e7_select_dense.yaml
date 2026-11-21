@@ -1,0 +1,8 @@
+name: e7_select_dense
+description: Добір фінальної конфігурації - Dense AE з меншим bottleneck (latent=32 є в e1).
+seeds: [0, 1, 2]
+overrides:
+  model: {arch: dense}
+sweep:
+  data.normal_classes: [[2], [5], [8]]
+  model.latent_dim: [8, 16]

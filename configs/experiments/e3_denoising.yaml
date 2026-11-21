@@ -1,0 +1,6 @@
+name: e3_denoising
+description: Denoising AE - гаусів шум на вході під час навчання.
+seeds: [0, 1, 2]
+sweep:
+  data.normal_classes: [[2], [5], [8]]
+  train.noise_std: [0.0, 0.1, 0.2, 0.4]

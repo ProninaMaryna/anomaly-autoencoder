@@ -1,0 +1,5 @@
+name: e0_smoke
+description: Швидка перевірка працездатності пайплайну.
+seeds: [0]
+sweep:
+  method: [autoencoder, pca]

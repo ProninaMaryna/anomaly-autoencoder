@@ -1,0 +1,6 @@
+name: e6_contamination
+description: Стійкість до забруднення навчальної вибірки аномаліями.
+seeds: [0, 1, 2]
+sweep:
+  data.normal_classes: [[2], [5], [8]]
+  data.contamination: [0.0, 0.01, 0.05, 0.1, 0.2]

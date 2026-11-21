@@ -1,0 +1,113 @@
+{
+  "summary": {
+    "experiment": "e5_sample_efficiency",
+    "run": "normal_classes=2__n_train=None__method=autoencoder__seed=2",
+    "method": "autoencoder",
+    "arch": "conv",
+    "latent_dim": 32,
+    "noise_std": 0.0,
+    "lr": 0.001,
+    "batch_size": 128,
+    "loss": "mse",
+    "normal_classes": "2",
+    "n_train": 5362,
+    "contamination": 0.0,
+    "seed": 2,
+    "n_params": 241441,
+    "epochs_run": 157,
+    "best_epoch": 142,
+    "train_time_s": 933.7957209000015,
+    "val_roc_auc": 0.9057700103598937,
+    "val_pr_auc": 0.9290201323645141,
+    "val_threshold": 0.010420470032840967,
+    "val_precision": 0.9367088607594937,
+    "val_recall": 0.7449664429530202,
+    "val_f1": 0.8299065420560747,
+    "val_fpr": 0.050335570469798654,
+    "test_roc_auc": 0.9173615361077112,
+    "test_pr_auc": 0.9891518920033608,
+    "test_threshold": 0.010420470032840967,
+    "test_precision": 0.9915599534342259,
+    "test_recall": 0.7598126672613738,
+    "test_f1": 0.8603535353535353,
+    "test_fpr": 0.0562015503875969
+  },
+  "val": {
+    "roc_auc": 0.9057700103598937,
+    "pr_auc": 0.9290201323645141,
+    "threshold": 0.010420470032840967,
+    "precision": 0.9367088607594937,
+    "recall": 0.7449664429530202,
+    "f1": 0.8299065420560747,
+    "fpr": 0.050335570469798654
+  },
+  "test": {
+    "roc_auc": 0.9173615361077112,
+    "pr_auc": 0.9891518920033608,
+    "threshold": 0.010420470032840967,
+    "precision": 0.9915599534342259,
+    "recall": 0.7598126672613738,
+    "f1": 0.8603535353535353,
+    "fpr": 0.0562015503875969
+  },
+  "per_digit_test": {
+    "0": {
+      "flagged_rate": 0.860204081632653,
+      "n": 980,
+      "auc_vs_normal": 0.9716569767441862
+    },
+    "1": {
+      "flagged_rate": 0.021145374449339206,
+      "n": 1135,
+      "auc_vs_normal": 0.5495466653006864
+    },
+    "2": {
+      "flagged_rate": 0.0562015503875969,
+      "n": 1032
+    },
+    "3": {
+      "flagged_rate": 0.7663366336633664,
+      "n": 1010,
+      "auc_vs_normal": 0.9560912195870751
+    },
+    "4": {
+      "flagged_rate": 0.9531568228105907,
+      "n": 982,
+      "auc_vs_normal": 0.9831728871627275
+    },
+    "5": {
+      "flagged_rate": 0.9910313901345291,
+      "n": 892,
+      "auc_vs_normal": 0.9944521934855911
+    },
+    "6": {
+      "flagged_rate": 0.9363256784968684,
+      "n": 958,
+      "auc_vs_normal": 0.9829182243368775
+    },
+    "7": {
+      "flagged_rate": 0.6799610894941635,
+      "n": 1028,
+      "auc_vs_normal": 0.9343083582179591
+    },
+    "8": {
+      "flagged_rate": 0.8870636550308009,
+      "n": 974,
+      "auc_vs_normal": 0.9748798210846347
+    },
+    "9": {
+      "flagged_rate": 0.8850346878097126,
+      "n": 1009,
+      "auc_vs_normal": 0.9723707562173
+    }
+  },
+  "env": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "torch": "2.15.0+cpu",
+    "numpy": "1.26.4",
+    "sklearn": "1.4.2",
+    "device": "cpu",
+    "num_threads": 3
+  }
+}

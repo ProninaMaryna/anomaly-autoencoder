@@ -1,0 +1,44 @@
+method: autoencoder
+num_threads: 3
+save_model: true
+data:
+  root: data
+  normal_classes:
+  - 8
+  val_fraction: 0.1
+  val_anomaly_ratio: 1.0
+  n_train: null
+  contamination: 0.0
+model:
+  arch: dense
+  latent_dim: 32
+  channels:
+  - 32
+  - 64
+  hidden:
+  - 512
+  - 256
+  dropout: 0.0
+train:
+  epochs: 40
+  batch_size: 128
+  lr: 0.001
+  weight_decay: 0.0
+  loss: mse
+  noise_std: 0.0
+  grad_clip: null
+  early_stopping:
+    monitor: val_auc
+    patience: 8
+eval:
+  threshold_percentile: 95
+baseline_params:
+  pca:
+    n_components: 32
+  iforest:
+    n_estimators: 200
+  ocsvm:
+    nu: 0.1
+    gamma: scale
+experiment: e8_early_stopping
+seed: 2

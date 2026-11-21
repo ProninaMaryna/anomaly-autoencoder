@@ -1,0 +1,10 @@
+name: e8_early_stopping
+description: >
+  Рання зупинка за VAL ROC-AUC (потребує розмічених аномалій у валідації, напівкероване
+  налаштування) замість val_loss по нормальних (повністю некероване).
+seeds: [0, 1, 2]
+overrides:
+  train: {early_stopping: {monitor: val_auc, patience: 8}}
+sweep:
+  data.normal_classes: [[2], [5], [8]]
+  model.arch: [dense, conv]

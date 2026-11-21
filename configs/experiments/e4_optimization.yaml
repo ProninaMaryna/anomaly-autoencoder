@@ -1,0 +1,6 @@
+name: e4_optimization
+description: Чутливість до швидкості навчання (Adam, MSE).
+seeds: [0, 1, 2]
+sweep:
+  data.normal_classes: [[2], [5], [8]]
+  train.lr: [0.0001, 0.0003, 0.001, 0.003, 0.01]

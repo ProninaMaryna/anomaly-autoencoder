@@ -1,0 +1,6 @@
+name: e4b_loss
+description: Вплив функції втрат (MSE береться з e4_optimization при lr=0.001). Anomaly score завжди MSE.
+seeds: [0, 1, 2]
+sweep:
+  data.normal_classes: [[2], [5], [8]]
+  train.loss: [bce, l1]
